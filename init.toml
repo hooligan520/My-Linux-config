@@ -38,13 +38,17 @@
     enable_tabline_filetype_icon = true
     # 是否在状态栏上显示当前模式，默认情况下，不显示 Normal/Insert 等
     # 字样，只以颜色区分当前模式
-    enable_statusline_display_mode = false
+    enable_statusline_display_mode = true
 
     # MY OWN OPTIONS
     filemanager = "defx"
     autocomplete_method = "coc"
     bootstrap_before = "myspacevim#before"
     bootstrap_after = "myspacevim#after"
+    enable_googlesuggest = true
+    # project_rooter_patterns = ['.git/']
+    project_rooter_patterns = ['WORKSPACE', '.git/']
+
 
 # ----------------- SpaceVim 添加的各种 layers ---------------------------------
 

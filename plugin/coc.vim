@@ -30,13 +30,13 @@ call coc#config("languageserver", {
       \"ccls": {
       \  "command": "ccls",
       \  "filetypes": ["c", "cpp"],
-      \  "rootPatterns": ["compile_commands.json", ".svn/", ".git/"],
+      \  "rootPatterns": ["compile_commands.json"],
       \  "index": {
       \     "threads": 8
       \  },
       \  "initializationOptions": {
       \     "cache": {
-      \       "directory": ".ccls-cache"
+      \       "directory": ".ccls_cache"
       \     },
       \     "highlight": { "lsRanges" : v:true }
       \   },
@@ -127,7 +127,7 @@ nmap <leader>rn <Plug>(coc-rename)
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  autocmd FileType typescript,json,cc,c++ setl formatexpr=CocAction('formatSelected')
   " Update signature help on jump placeholder
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
